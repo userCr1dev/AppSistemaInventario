@@ -1,3 +1,4 @@
+# Archivos de configuración del entorno
 *.iml
 .gradle
 /local.properties
@@ -8,8 +9,12 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
+
+# Carpetas de compilación
 /build
 /captures
 .externalNativeBuild
 .cxx
+
+# Archivos locales
 local.properties

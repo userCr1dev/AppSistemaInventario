@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondoApp">
+
+    <!-- Sección de encabezado principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/naranjaRegistroProveedor"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvTituloProveedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar proveedor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            android:accessibilityHeading="true" />
+    </LinearLayout>
+
+    <!-- Contenedor desplazable para el formulario -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Campo de entrada: Nombre del proveedor -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombreProveedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre del proveedor"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/textoPrimario" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de entrada: RUC del proveedor -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRucProveedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="RUC"
+                    android:inputType="number"
+                    android:textColor="@color/textoPrimario" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de entrada: Teléfono del proveedor -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTelefonoProveedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Teléfono"
+                    android:inputType="phone"
+                    android:textColor="@color/textoPrimario" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de entrada: Correo electrónico del proveedor -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreoProveedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/textoPrimario" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de entrada: Dirección del proveedor -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDireccionProveedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Dirección"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/textoPrimario" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón principal para registrar proveedor -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardarProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GUARDAR"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/naranjaRegistroProveedor"
+                app:icon="@drawable/ic_add"
+                app:iconTint="@color/blanco"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:rippleColor="@color/grisClaro" />
+
+            <!-- Botón para regresar al dashboard -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVolverDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VOLVER AL DASHBOARD"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/grisClaro"
+                android:textColor="@color/naranjaRegistroProveedor"
+                app:icon="@drawable/ic_back"
+                app:iconTint="@color/naranjaRegistroProveedor"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:rippleColor="@color/grisClaro" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Sección de listado de proveedores -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProveedores"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+</LinearLayout>

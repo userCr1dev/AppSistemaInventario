@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales -->
+    <color name="verdePrincipal">#4CAF50</color>
+    <color name="verdeOscuro">#388E3C</color>
+    <color name="verdeRegistroProducto">#43A047</color>
+
+    <!-- Colores secundarios -->
+    <color name="azulSecundario">#03A9F4</color>
+    <color name="azulRegistroCategoria">#0277BD</color>
+
+    <!-- Colores de alerta y acción -->
+    <color name="naranjaRegistroProveedor">#F57C00</color>
+    <color name="rojoError">#D32F2F</color>
+
+    <!-- Fondo y tarjetas -->
+    <color name="fondoApp">#FFFFFF</color>
+    <color name="fondoCard">#E0E0E0</color>
+
+    <!-- Texto -->
+    <color name="textoPrimario">#212121</color>
+    <color name="textoSecundario">#333333</color>
+
+    <!-- Extras -->
+    <color name="blanco">#FFFFFF</color>
+    <color name="grisClaro">#DDDDDD</color>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CardView utilizada para mostrar la información de cada proveedor en la lista -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/fondoCard">
+
+    <!-- Contenedor principal en orientación horizontal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Icono representativo del proveedor -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_proveedores"
+            app:tint="@color/naranjaRegistroProveedor"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Icono proveedor" />
+
+        <!-- Sección de datos informativos del proveedor -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nombre del proveedor -->
+            <TextView
+                android:id="@+id/tvNombreProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del proveedor"
+                android:textColor="@color/naranjaRegistroProveedor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Información de contacto del proveedor -->
+            <TextView
+                android:id="@+id/tvContactoProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono / Correo"
+                android:textColor="@color/textoPrimario"
+                android:textSize="14sp" />
+
+            <!-- Dirección del proveedor -->
+            <TextView
+                android:id="@+id/tvDireccionProveedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección: Lima, Perú"
+                android:textColor="@color/textoPrimario"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Sección de botones de acción (editar y eliminar) -->
+        <ImageButton
+            android:id="@+id/btnEditarProveedor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_edit"
+            app:tint="@color/textoPrimario"
+            android:contentDescription="Editar proveedor" />
+
+        <ImageButton
+            android:id="@+id/btnEliminarProveedor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/textoPrimario"
+            android:contentDescription="Eliminar proveedor"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout del ítem de lista para mostrar información de movimientos de inventario -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#F5F5F5"
+    android:layout_marginBottom="8dp">
+
+    <!-- Nombre del producto asociado al movimiento -->
+    <TextView
+        android:id="@+id/tvProductoMovimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Producto"
+        android:textStyle="bold" />
+
+    <!-- Tipo de movimiento (entrada o salida) -->
+    <TextView
+        android:id="@+id/tvTipoMovimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo" />
+
+    <!-- Cantidad de unidades afectadas en el movimiento -->
+    <TextView
+        android:id="@+id/tvCantidadMovimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad" />
+
+    <!-- Fecha en que se realizó el movimiento -->
+    <TextView
+        android:id="@+id/tvFechaMovimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha" />
+
+</LinearLayout>

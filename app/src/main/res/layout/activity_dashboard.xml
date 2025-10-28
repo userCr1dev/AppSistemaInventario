@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoApp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título del panel -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:text="Panel de Inventario"
+            android:textColor="@color/textoPrimario"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:accessibilityHeading="true" />
+
+        <!-- Tarjeta: Productos -->
+        <LinearLayout
+            android:id="@+id/cardProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/item_background"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_productos"
+                app:tint="@color/verdeRegistroProducto" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="12dp">
+
+                <TextView
+                    android:id="@+id/tvTotalProductos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total de productos: 0"
+                    android:textSize="16sp"
+                    android:textColor="@color/textoPrimario" />
+
+                <TextView
+                    android:id="@+id/tvStockBajo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock bajo: 0"
+                    android:textSize="14sp"
+                    android:textColor="@color/textoSecundario" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Lista de productos con stock bajo -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerStockBajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Tarjeta: Categorías -->
+        <LinearLayout
+            android:id="@+id/cardCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/item_background"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_categorias"
+                app:tint="@color/azulRegistroCategoria" />
+
+            <TextView
+                android:id="@+id/tvTotalCategorias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total de categorías: 0"
+                android:textSize="16sp"
+                android:textColor="@color/textoPrimario"
+                android:paddingStart="12dp" />
+        </LinearLayout>
+
+        <!-- Tarjeta: Proveedores -->
+        <LinearLayout
+            android:id="@+id/cardProveedores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/item_background"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_proveedores"
+                app:tint="@color/naranjaRegistroProveedor" />
+
+            <TextView
+                android:id="@+id/tvTotalProveedores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total de proveedores: 0"
+                android:textSize="16sp"
+                android:textColor="@color/textoPrimario"
+                android:paddingStart="12dp" />
+        </LinearLayout>
+
+        <!-- Botones de navegación -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarProducto"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar producto"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/verdeRegistroProducto"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/blanco"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:rippleColor="@color/grisClaro" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarCategoria"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar categoría"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/azulRegistroCategoria"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/blanco"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:rippleColor="@color/grisClaro" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarProveedor"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar proveedor"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/naranjaRegistroProveedor"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/blanco"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:rippleColor="@color/grisClaro" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrarMovimiento"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar movimiento"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/verdeRegistroProducto"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/blanco"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:rippleColor="@color/grisClaro" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizarDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACTUALIZAR PANEL"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/textoPrimario"
+            android:textColor="@color/blanco"
+            app:icon="@drawable/ic_refresh"
+            app:iconTint="@color/blanco"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:rippleColor="@color/grisClaro" />
+
+    </LinearLayout>
+</ScrollView>

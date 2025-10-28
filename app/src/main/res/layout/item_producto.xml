@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CardView para mostrar la información de cada producto en la lista principal -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="6dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardBackgroundColor="@color/fondoCard">
+
+    <!-- Contenedor principal horizontal para información del producto y botones de acción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Sección de detalles del producto -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nombre del producto -->
+            <TextView
+                android:id="@+id/tvNombreProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del producto"
+                android:textColor="@color/verdeRegistroProducto"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Precio del producto -->
+            <TextView
+                android:id="@+id/tvPrecioProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio: S/ 0.00"
+                android:textColor="@color/textoPrimario"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Stock disponible -->
+            <TextView
+                android:id="@+id/tvStockProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stock: 0 unidades"
+                android:textColor="@color/textoPrimario"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Unidad de medida -->
+            <TextView
+                android:id="@+id/tvUnidadProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unidad: kg"
+                android:textColor="@color/textoPrimario"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Categoría del producto -->
+            <TextView
+                android:id="@+id/tvCategoriaProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categoría: Sin categoría"
+                android:textColor="@color/textoSecundario"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Proveedor del producto -->
+            <TextView
+                android:id="@+id/tvProveedorProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Proveedor: Sin proveedor"
+                android:textColor="@color/textoSecundario"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Sección de botones de acción (editar y eliminar) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Botón para editar producto -->
+            <ImageButton
+                android:id="@+id/btnEditarProducto"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/verdeRegistroProducto"
+                android:contentDescription="Editar producto" />
+
+            <!-- Botón para eliminar producto -->
+            <ImageButton
+                android:id="@+id/btnEliminarProducto"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete"
+                app:tint="@color/rojoError"
+                android:contentDescription="Eliminar producto"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

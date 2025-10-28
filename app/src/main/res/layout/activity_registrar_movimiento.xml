@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondoApp"
+    android:padding="0dp">
+
+    <!-- Sección de encabezado principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/verdeRegistroProducto"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp">
+
+        <!-- Título del encabezado -->
+        <TextView
+            android:id="@+id/tvTituloMovimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar movimiento"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            android:accessibilityHeading="true" />
+    </LinearLayout>
+
+    <!-- Contenedor desplazable del formulario principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Selector del producto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producto"
+                android:textColor="@color/textoPrimario"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spProducto"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <!-- Selector del tipo de movimiento -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de movimiento"
+                android:textColor="@color/textoPrimario"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spTipoMovimiento"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <!-- Campo de entrada para la cantidad -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.App.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Cantidad"
+                app:hintEnabled="true"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCantidadMovimiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/textoPrimario"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón para registrar el movimiento -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrarMovimiento"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REGISTRAR MOVIMIENTO"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/verdeRegistroProducto"
+                android:textColor="@color/blanco"
+                app:icon="@drawable/ic_add"
+                app:iconTint="@color/blanco"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp" />
+
+            <!-- Botón para volver al dashboard -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVolverDashboard"
+                style="@style/Widget.App.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VOLVER AL DASHBOARD"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/grisClaro"
+                android:textColor="@color/textoPrimario"
+                app:icon="@drawable/ic_back"
+                app:iconTint="@color/textoPrimario"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

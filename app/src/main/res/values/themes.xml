@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.AppSistemaInventario" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores base -->
+        <item name="colorPrimary">@color/verdePrincipal</item>
+        <item name="colorPrimaryVariant">@color/verdeOscuro</item>
+        <item name="colorSecondary">@color/azulSecundario</item>
+        <item name="android:colorBackground">@color/fondoApp</item>
+
+        <!-- Tipografía -->
+        <item name="android:fontFamily">sans-serif</item>
+
+        <!-- Estilos -->
+        <item name="buttonStyle">@style/Widget.App.Button</item>
+        <item name="cardViewStyle">@style/Widget.App.CardView</item>
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay_App_Dialog</item>
+
+        <item name="android:elevation">0dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Botón general -->
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- CardView -->
+    <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/fondoCard</item>
+        <item name="cardCornerRadius">12dp</item>
+    </style>
+
+    <!-- TextInput -->
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/verdePrincipal</item>
+        <item name="boxBackgroundColor">@color/blanco</item>
+        <item name="android:textColorHint">@color/textoSecundario</item>
+    </style>
+
+    <!-- Diálogo -->
+    <style name="ThemeOverlay_App_Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:textColor">@color/textoPrimario</item>
+    </style>
+
+</resources>

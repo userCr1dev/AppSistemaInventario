@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/fondoCard"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <!-- Contenedor principal de los elementos de la categoría -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <!-- Imagen representativa de la categoría -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_categorias"
+            app:tint="@color/azulRegistroCategoria" />
+
+        <!-- Contenedor de los textos informativos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nombre de la categoría -->
+            <TextView
+                android:id="@+id/tvNombreCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la categoría"
+                android:textColor="@color/azulRegistroCategoria"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Descripción de la categoría -->
+            <TextView
+                android:id="@+id/tvDescripcionCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="@color/textoPrimario"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Botón de edición -->
+        <ImageButton
+            android:id="@+id/btnEditarCategoria"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_edit"
+            app:tint="@color/textoPrimario"
+            android:contentDescription="Editar categoría" />
+
+        <!-- Botón de eliminación -->
+        <ImageButton
+            android:id="@+id/btnEliminarCategoria"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/textoPrimario"
+            android:contentDescription="Eliminar categoría" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

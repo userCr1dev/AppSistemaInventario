@@ -87,4 +87,3 @@ Este proyecto es de uso académico y libre distribución bajo fines educativos.
 
 **Cristian**  
 Estudiante de Computación e Informática  
-Desarrollador Android con enfoque en accesibilidad, estructura profesional y documentación clara.

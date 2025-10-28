@@ -85,5 +85,5 @@ Este proyecto es de uso académico y libre distribución bajo fines educativos.
 
 ## 👨‍💻 Autor
 
-**Cristian**  
+**userCr1dev**  
 Estudiante de Computación e Informática  

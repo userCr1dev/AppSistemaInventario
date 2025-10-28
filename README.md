@@ -53,12 +53,6 @@ AppSistemaInventario/
 
 ---
 
-## 📷 Capturas de pantalla
-
-> *(Agrega aquí imágenes de la app en funcionamiento si lo deseas, por ejemplo: pantallas de registro, dashboard, etc.)*
-
----
-
 ## 📦 Instalación
 
 1. Clona el repositorio:
